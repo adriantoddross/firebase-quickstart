@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase Quickstart</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Quickstart</title>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1>Firebase Quickstart 🔥</h1>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDUTNFwcVtullDL_C-WcnN7_nthM-12PAY",
+        authDomain: "firebasics-326b0.firebaseapp.com",
+        projectId: "firebasics-326b0",
+        storageBucket: "firebasics-326b0.appspot.com",
+        messagingSenderId: "609942770462",
+        appId: "1:609942770462:web:e6caadd20206ce6b49ef0f",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script defer src="app.js"></script>
+  </body>
 </html>
