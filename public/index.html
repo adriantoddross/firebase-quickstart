@@ -21,8 +21,15 @@
   <body>
     <h1>Firebase Quickstart 🔥</h1>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <section id="whenSignedOut">
+      <button id="signInBtn">Sign in with Google</button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+      <div id="userDetails">
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+    </section>
 
     <script>
       var firebaseConfig = {
