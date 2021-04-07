@@ -38,6 +38,16 @@ auth.onAuthStateChanged((user) => {
         name: "random item!!!",
         createdAt: serverTimestamp(),
       });
+
+      // Query
+      unsubscribe = thingsRef
+        .where("uid", "==", user.uid)
+        .onSnapshot((querySnapshot) => {
+          // Map results to an array of li elements
+          const items = querySnapshot.docs.map((doc) => {
+            return `<li>Finish putting code here...</li>`;
+          });
+        });
     };
   } else {
     // Not Signed In
