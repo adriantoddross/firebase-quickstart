@@ -42,11 +42,13 @@ auth.onAuthStateChanged((user) => {
       // Query
       unsubscribe = thingsRef
         .where("uid", "==", user.uid)
+        .orderBy("createdAt") // Requires an index
         .onSnapshot((querySnapshot) => {
           // Map results to an array of li elements
           const items = querySnapshot.docs.map((doc) => {
-            return `<li>Finish putting code here...</li>`;
+            return `<li>${doc.data().name}</li>`;
           });
+          thingsList.innerHTML = items.join("");
         });
     };
   } else {
@@ -54,5 +56,8 @@ auth.onAuthStateChanged((user) => {
     whenSignedIn.hidden = true;
     whenSignedOut.hidden = false;
     userDetails.innerHTML;
+
+    // Unsubscribe when a user signs out
+    unsubscribe && unsubscribe();
   }
 });
