@@ -1,3 +1,5 @@
+var faker = require("faker");
+
 const signInBtn = document.getElementById("signInBtn");
 const signOutBtn = document.getElementById("signOutBtn");
 
