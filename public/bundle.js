@@ -123225,7 +123225,6 @@ exports.generate = function generate(faker) {
 
 },{}],1454:[function(require,module,exports){
 var faker = require("faker");
-console.log(faker);
 
 const signInBtn = document.getElementById("signInBtn");
 const signOutBtn = document.getElementById("signOutBtn");
@@ -123264,7 +123263,7 @@ auth.onAuthStateChanged((user) => {
 
       thingsRef.add({
         uid: user.uid,
-        name: "random item!!!",
+        name: faker.commerce.productName(),
         createdAt: serverTimestamp(),
       });
 
